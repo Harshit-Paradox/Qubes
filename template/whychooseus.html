@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  {% extends 'base.html' %}
+  {% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>3 Qubes</title>
+  <meta name="description" content="3 Qubes">
+  <meta name="keywords" content="">
+
+  <link href="images/favicon.png" rel="shortcut icon">
+
+</head>
+
+<body>
+  {% block content %}
+
+
+  <header class="page-header">
+    <div class="video-bg">
+      <video src="{% static 'videos/why-choose-us.mp4'%}" autoplay muted playsinline loop></video>
+    </div>
+    <!-- end video-bg -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Why Us?</h1>
+        </div>
+        <!-- end col-12 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+  </header>
+  <!-- end page-header -->
+
+  <!-- AI 1 -->
+  <section class="content-section ">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-lg-6 reveal-effect masker wow fadeInLeft">
+        <img src="{% static 'images/home/ai-1.jpg' %}" alt="">
+      </div>
+      <!-- end col-6 -->
+      
+      <div class="col-lg-6">
+		  <div class="text-content-block px-0 mt-4 mt-sm-0 px-sm-5 wow fadeInRight">
+        
+        <div class="section-title gradient-text mb-4">          
+          <h2>Tech-enhanced digital storefront</h2>
+        </div>
+        <p>Optimize your digital presence with our tech-driven storefront. It strategically elevates the visibility of your properties through advanced SEO techniques and employs technology to analyze market trends.</p>
+			  </div>
+		  <!-- end text-content-block -->
+      </div>
+      <!-- end col-5 --> 
+    </div>
+    <!-- end row --> 
+  </div>
+  <!-- end container --> 
+</section>
+<!-- end content-section -->
+
+  <!-- AI 2 -->
+  <section class="content-section no-spacing">
+    <div class="container">
+      <div class="row align-items-center no-gutters">
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="left-side-content">
+            <div class="inner">
+            <div class="section-title mb-4">          
+          <h2>Tech-driven digital marketing</h2>
+        </div>
+        <p>Our holistic digital marketing strategy is further elevated by technology and creativity. Our approach optimizes tasks like email campaigns, social media, and SEO, ensuring your properties gain optimal exposure, reaching the right audience at the right times for qualified leads.</p>
+              
+            </div>
+            <!-- inner -->
+          </div>
+          <!-- end left-side-content -->
+        </div>
+        <!-- end col-6 -->
+        <div class="col-lg-6">
+          <figure class="right-side-image reveal-effect masker wow fadeIn">
+             <!-- <img src="images/home/core-value.webp" alt="Image">-->
+             <video width="100%" height="100%" autoplay muted loop playsinline style="width: 100%; max-height: 100%;" class="value-video">
+            <source src="{% static 'videos/Digital-marketing-with-AI.mp4' %}" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+          Your browser does not support the video tag.
+          </video>
+          </figure>
+          
+
+          <!-- end right-side-image -->
+        </div>
+        <!-- end col-6 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+  </section>
+  <!-- end core value -->
+
+  
+  <!-- AI 3 -->
+  <section class="content-section ">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- end col-5 -->
+      <div class="col-lg-6 reveal-effect masker wow fadeInLeft">
+        <img src="{% static 'images/home/ai-3.jpg' %}" alt="">
+      </div>
+      <!-- end col-6 --> 
+      <div class="col-lg-6">
+		  <div class="text-content-block px-0 mt-4 mt-sm-0 px-sm-5 wow fadeInRight">
+        
+        <div class="section-title gradient-text mb-4">          
+          <h2>Innovative technology integration</h2>
+        </div>
+        <p>At 3Qubes, we don't just provide technology – we offer a dynamic, integrated system that adapts to your unique needs and the evolving real estate market. Our advanced technology goes gives the developers a sophisticated tool to stay ahead of industry trends and position your properties for success.</p>
+			  </div>
+		  <!-- end text-content-block -->
+      </div>
+    </div>
+    <!-- end row --> 
+  </div>
+  <!-- end container --> 
+</section>
+<!-- end content-section -->
+
+{% endblock %}
+
+
+</body>
+
+</html>

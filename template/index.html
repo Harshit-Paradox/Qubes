@@ -1,0 +1,618 @@
+<!doctype html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>3 Qubes</title>
+  <meta name="description" content="3 Qubes">
+  <meta name="keywords" content="">
+
+  <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+
+  <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bundle.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+
+<body>
+<div class="cursor js-cursor"></div>
+  <!-- end cursor -->
+  <div class="preloader" id="preloader"> <span></span> <span></span> <span></span> <span></span>
+    <div class="inner">
+      <canvas class="progress-bar" id="progress-bar" width="400" height="400"></canvas>
+      <img src="{% static 'images/3Qubes-Logo.svg' %}"  alt="Image">
+    </div>
+    <!-- end inner -->
+  </div>
+  <!-- end preloder -->
+  <div class="page-transition"> <span></span> <span></span> <span></span> <span></span> </div>
+  <!-- end page-transition -->
+  <div class="site-navigation">
+    <ul>
+      <li><b><a href= {% url 'home' %} data-text="Home">Home</a></b></li>
+      <li><b><a href={% url 'about' %} data-text="About Us">About Us</a></b></li>
+      <li><b><a href={% url 'whyus' %} data-text="Why Choose Us">Why Choose Us</a></b></li>
+      <li><b><a href={% url 'Ourteam' %} data-text="Our Team">Our Team</a></b></li>
+      <li><b><a href= {% url 'Service' %} data-text="Our Services">Our Services</a></b></li>
+      <li><b><a href={% url 'carrers' %} data-text="Careers">Careers</a></b></li>
+      <li><b><a href={% url 'contactus' %} data-text="Contact Us">Contact Us</a></b></li>
+    </ul>
+  </div>
+  <!-- edn site-navigation -->
+  <nav class="navbar">
+    <div class="logo"> <a href={% url 'index' %}><img src="{% static 'images/3Qubes-Logo.svg' %}" alt="Image"> </a> </div>
+    <!-- end logo -->
+    <span class="menu-text">Navigation</span>
+  <div class="sandwich-menu">
+    <div class="sandwich">
+      <div class="sand"> <span></span> <span></span> </div>
+      <!-- end sand -->
+      <div class="closed"> <span></span> <span></span> </div>
+      <!-- end closed --> 
+    </div>
+    <!-- end sandwich --> 
+  </div>
+  <!-- end sandwich-menu --> 
+
+  </nav>
+
+
+
+  <!-- banner -->
+  <header class="slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-inner" data-swiper-parallax="45%">
+            <div class="slide-image" data-background="{% static 'images/home/builder-banner.jpg' %}"></div>
+            <div class="slide-content">
+              <h1>Builders</h1>
+              <h3 class="yellow-text">Empowering Builders</h3>
+              <div class="link-holder"> <a href={% url 'builder' %}>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
+                    <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
+                  </svg>
+                  <span>DISCOVER</span> </a> </div>
+              <!-- end link-holder -->
+            </div>
+            <!-- end slide-content -->
+          </div>
+          <!-- end slide-inner -->
+        </div>
+        <!-- end swiper-slide -->
+        <div class="swiper-slide">
+          <div class="slide-inner" data-swiper-parallax="45%">
+            <div class="slide-image" data-background="{% static 'images/home/broker-banner.jpg' %}"></div>
+            <div class="slide-content">
+              <h1>Brokers</h1>
+              <h3 class="seagreen-text">Strengthening Brokers</h3>
+              <div class="link-holder"> <a href={% url 'broker' %}>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
+                    <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
+                  </svg>
+                  <span>DISCOVER</span> </a> </div>
+              <!-- end link-holder -->
+            </div>
+            <!-- end slide-content -->
+          </div>
+          <!-- end slide-inner -->
+        </div>
+        <!-- end swiper-slide -->
+        <div class="swiper-slide">
+          <div class="slide-inner" data-swiper-parallax="45%">
+            <div class="slide-image" data-background="{% static 'images/home/buyer-banner.jpg' %}"></div>
+            <div class="slide-content">
+              <h1>Buyers</h1>
+              <h3 class="green-text">Connecting Buyers</h3>
+              <div class="link-holder"> <a href={% url 'buyer' %}>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
+                    <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
+                  </svg>
+                  <span>DISCOVER</span> </a> </div>
+              <!-- end link-holder -->
+            </div>
+            <!-- end slide-content -->
+          </div>
+          <!-- end slide-inner -->
+        </div>
+        <!-- end swiper-slide -->
+        <!-- <div class="swiper-slide">
+          <div class="slide-inner" data-swiper-parallax="45%">
+            <div class="slide-image" data-background="images/slide04.jpg"></div>
+            <div class="slide-content">
+              <h1>Astrocar</h1>
+              <div class="link-holder"> <a href="case-single.html">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
+                    <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
+                  </svg>
+                  <span>DISCOVER</span> </a> </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- end swiper-slide -->
+      </div>
+      <!-- end swiper-wrapper -->
+    </div>
+    <!-- end swiper-container -->
+    <div class="bottom-bar">
+      <!-- <div class="sound">
+        <div class="equalizer"> <span></span> <span></span> <span></span> <span></span> </div>
+        
+        <b>Sound on</b>
+      </div> -->
+      <!-- end sound -->
+      <div class="swiper-pagination"></div>
+      <!-- end swiper-pagination -->
+      <!-- <div class="slider-fraction"><span></span>|<span></span></div> -->
+      <!-- end slider-fraction -->
+      <div class="slider-controls">
+        <div class="swiper-button-prev" data-text="Prev">Prev</div>
+        <!-- end swiper-button-prev -->
+        <div class="swiper-button-next" data-text="Next">Next</div>
+        <!-- end swiper-button-next -->
+      </div>
+      <!-- end slider-controls -->
+    </div>
+    <!-- end bottom-bar -->
+    <aside class="left-side">
+      <div class="social-links">
+        <ul>
+          <li><a href="https://www.linkedin.com/company/3-qubes/" data-text="linkedin"><i class="fab fa-linkedin fa-2x"></i></a></li>
+          <li><a href="https://www.threads.net/@3qubes.in" data-text="threads"><img src="{% static 'images/threads.svg' %}" alt="" width="28" height="28"></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61555488586010&mibextid=ZbWKwL" data-text="facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+          <li><a href="https://www.instagram.com/3qubes.in?igsh=MXZnNGt1ZHJjOWF3ZQ==" data-text="instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li><a href="https://youtube.com/@3Qubes?si=m5XH6woWXF_VPpTR" data-text="youtube"><i class="fab fa-youtube-square fa-2x"></i></a></li>
+        </ul>
+      </div>
+      <!-- end social-links -->
+    </aside>
+    <!-- end left-side -->
+    <aside class="right-side"> <a data-text="info@3qubes.in">info@3qubes.in</a> </aside>
+    <!-- end right-side -->
+  </header>
+  <!-- end slider -->
+  <!-- About Us -->
+  <section class="content-section">
+    <div class="container">
+      <div class="vc_row wpb_row vc_inner vc_row-fluid">
+        <div class="wpb_column vc_column_container">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper">
+              <div class="icon-content-list-block reveal-effect masker wow fadeIn ">
+                <div class="p-0 p-sm-5">
+                  <div class="section-title mb-4">
+                    <h6 class="text-uppercase">Get to Know Us</h6>
+                    <h2 class="gradient-text">About 3Qubes</h2>
+                  </div>
+                  <p class="p17 p-0">Welcome to the future of real estate marketing with 3Qubes. Our platform seamlessly integrates Information Technology and Artificial Intelligence to redefine how you showcase your properties. Imagine a digital storefront that not only displays your listings elegantly but also leverages AI for market trend analysis, providing personalized insights into optimal property presentation. With 3Qubes, your properties become a dynamic, AI-optimized showcase in the competitive real estate market.
+                  </p>
+
+                  <a class="custom-btn blue-btn wow fadeInLeft" href={% url 'about' %}>
+                    <svg>
+                      <rect width="218" height="56" x="1" y="1" rx="0" fill="none" stroke="#4e36a1"></rect>
+                    </svg>
+                    <span>SEE MORE</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end content-section -->
+
+  <!-- Core Value -->
+  <section class="content-section no-spacing">
+    <div class="container">
+      <div class="row align-items-center no-gutters">
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="left-side-content">
+            <div class="inner">
+              <div class="section-title mb-4">
+                <h6 class="text-uppercase">Our Company Philosophy</h6>
+                <h4 class="">Core Value</h4>
+              </div>
+              <ul class="core-value">
+                <li>Using technology combined with the right strategy</li>
+                <li>Intent to provide end-to-end solutions in the real estate space by focusing on the end user</li>
+                <li>Delivering the right project in the quickest and purest form to our customers</li>
+              </ul>
+
+            </div>
+            <!-- inner -->
+          </div>
+          <!-- end left-side-content -->
+        </div>
+        <!-- end col-6 -->
+        <div class="col-lg-6">
+          <figure class="right-side-image reveal-effect masker wow fadeIn">
+            <!-- <img src="images/home/core-value.webp" alt="Image">-->
+            <video width="100%" height="100%" autoplay muted loop playsinline style="width: 100%; max-height: 100%;" class="value-video">
+              <source src="{% static 'videos/value--.mp4' %}" type="video/mp4">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+              Your browser does not support the video tag.
+            </video>
+          </figure>
+
+
+          <!-- end right-side-image -->
+        </div>
+        <!-- end col-6 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+  </section>
+  <!-- end core value -->
+
+  <!-- Why Choose Us -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h6 class="text-uppercase">Where Quality Meets Commitment</h6>
+            <h2 class="gradient-text">Why Choose Us?</h2>
+          </div>
+          <!-- end section-title -->
+        </div>
+        <!-- end col-12 -->
+        <div class="col-lg-4">
+          <div class="recent-news wow fadeIn">
+            <figure class="reveal-effect masker wow"> <img src="{% static 'images/home/ai-1.jpg' %}" alt="Image">
+              <figcaption>
+                <h3 class="mb-4 font-weight-bold text-uppercase fs-small">Tech-enhanced digital storefront</h3>
+                <h5 class="opacity-75">Optimize your digital presence with our tech-driven storefront.</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- end recent-news -->
+        </div>
+        <!-- end col-4 -->
+        <div class="col-lg-4">
+          <div class="recent-news wow fadeIn">
+            <figure class="reveal-effect masker wow"> <img src="{% static 'images/home/ai-2.jpg' %}" alt="Image">
+              <figcaption>
+                <h3 class="mb-4 font-weight-bold text-uppercase fs-small">Tech-driven digital marketing</h3>
+                <h5 class="opacity-75">Our holistic digital marketing strategy is further elevated by technology and creativity.</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- end recent-news -->
+        </div>
+        <!-- end col-4 -->
+        <div class="col-lg-4">
+          <div class="recent-news wow fadeIn">
+            <figure class="reveal-effect masker wow"> <img src="{% static 'images/home/ai-3.jpg' %}" alt="Image">
+              <figcaption>
+                <h3 class="mb-4 font-weight-bold text-uppercase fs-small">Innovative technology integration</h3>
+                <h5 class="opacity-75">At 3 Qubes, we don't just offer technology; we provide an integrated system</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- end recent-news -->
+        </div>
+        <!-- end col-4 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end content-section -->
+
+  <!-- Experia by 3 Qubes -->
+  <section class="content-section no-spacing">
+    <div class="container-fluid p-0">
+      <div class="row align-items-center no-gutters">
+
+        <div class="col-lg-6">
+          <figure class="right-side-image reveal-effect masker wow fadeIn">
+            <img src="{% static 'images/experia/Experia-by-3qubes-Black.png' %}" alt="Experia" class="experia-logo">
+
+            <!-- <img src="images/home/core-value.webp" alt="Image">-->
+            <video width="100%" height="100%" autoplay muted loop playsinline style="width: 100%; max-height: 100%;" class="value-video">
+              <source src="{% static 'videos/Experia.mp4'%}" type="video/mp4">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+              Your browser does not support the video tag.
+            </video>
+          </figure>
+
+          <!-- end right-side-image -->
+        </div>
+        <!-- end col-6 -->
+
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="left-side-content remove-after pl-5">
+            <div class="inner">
+              <div class="section-title mb-4">
+                <h6 class="text-uppercase">Experia by 3 Qubes</h6>
+                <h4 class="experia-h4">Capture, Create & Captivate With Experia's Marketing Mastery</h4>
+              </div>
+              <h5>Creating A Comprehensive Real Estate Experience To Engage Your Audience </h5>
+              <a class="custom-btn white-btn wow fadeInLeft" href={% url 'experia' %}>
+                <svg>
+                  <rect width="218" height="56" x="1" y="1" rx="0" fill="none" stroke="#ffffff"></rect>
+                </svg>
+                <span>SEE MORE</span>
+              </a>
+
+            </div>
+            <!-- inner -->
+          </div>
+          <!-- end left-side-content -->
+        </div>
+        <!-- end col-6 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+  </section>
+  <!-- end core value -->
+
+  <!-- Affiliate section -->
+  <section class="content-section contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" style="background-color:  transparent; font-size: 40px; top: -7px !important;" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+          <div class="section-title mb-5 wow fadeInLeft border-1">
+            <h2 class="gradient-text mb-0">Affiliate with 3 Qubes!</h2>
+            <p class="p17">Join forces with us in the real estate realm, reap the benefits and <br>get support from 3 Qubes!</p>
+          </div>
+          <!-- end section-title -->
+          <div class="contact-form wow fadeIn">
+            <form id="contact" name="contact" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <p>Full Name *</p>
+                    <input type="text" name="name" id="name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <p>Contact Number *</p>
+                    <input type="text" name="number" id="number" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="submit" name="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+          <!-- end contact-form -->
+        </div>
+        <!-- end col-6 -->
+        <div class="col-lg-5 reveal-effect masker wow mt-5 mt-sm-0">
+          <img src="{% static 'images/home/Affiliate.jpg' %}" alt="">
+        </div>
+        <!-- end col-5 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end content-section -->
+
+  <!-- Associate Partners -->
+  <section class="content-section bg-light-2 pt-0">
+
+    <svg class="lqd-custom-shape left-0 rotate-180" preserveaspectratio="none" viewbox="0 0 1440 150">
+      <path class="lqd-shape-fill" d="M 0 26.1978 C 275.76 83.8152 430.707 65.0509 716.279 25.6386 C 930.422 -3.86123 1210.32 -3.98357 1439 9.18045 C 2072.34 45.9691 2201.93 62.4429 2560 26.198 V 172.199 L 0 172.199 V 26.1978 Z" fill="#fff">
+        <animate repeatCount="indefinite" fill="#ffffff" attributeName="d" dur="10s" values="M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z; M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z; M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z; M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z"></animate>
+      </path>
+    </svg>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title mb-5 wow fadeInUp border-1 justify-content-center">
+            <h2 class="gradient-text mb-0">Our Associate Partners in Growth</h2>
+            <p class="p17">Our partners help in providing comprehensive support system for events and <br>project launches, driving success for esteemed developers.</p>
+          </div>
+          <!-- end section-title -->
+
+        </div>
+        <!-- end col-12 -->
+
+      </div>
+      <!-- end row -->
+
+      <div class="row">
+
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-4 mt-lg-4 mt-xl-0 reverse-flex">
+          <div class="icon_box_all style_three reveal-effect masker wow h-100">
+            <div class="icon_content ">
+              <div class="icon">
+                <img src="{% static 'images/associate-partner/dian.jpg' %}" alt="">
+              </div>
+              <div class="txt_content">
+                <h3 class="font-weight-bold">Dian Ideas and Solutions</h3>
+                <p class="p17">Experts in storytelling, creating great ideas and focusing on delivering engaging events while nurturing the needs of clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / -->
+
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-4 mt-lg-4 mt-xl-0 reverse-flex">
+          <div class="icon_box_all style_three reveal-effect masker wow h-100">
+            <div class="icon_content ">
+              <div class="icon">
+                <img src="{% static 'images/associate-partner/isync.jpg'%}" alt="">
+              </div>
+              <div class="txt_content">
+                <h3 class="font-weight-bold">InSync Marketing</h3>
+                <p class="p17"> One of India’s leading brand communication companies, experts in integrating strategy, creativity, and technology to provide unique marketing & experiential solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / -->
+
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-4 mt-lg-4 mt-xl-0 reverse-flex">
+          <div class="icon_box_all style_three reveal-effect masker wow h-100">
+            <div class="icon_content ">
+              <div class="icon">
+                <img src="{% static 'images/associate-partner/launch.jpg' %}" alt="">
+              </div>
+              <div class="txt_content">
+                <h3 class="font-weight-bold">Launch Partners</h3>
+                <p class="p17">Committed to delivering customized solutions and experts in forging robust partnerships with premier real estate developers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / -->
+
+      </div>
+
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end  Associate Partners section -->
+
+
+  <!-- Affiliate section -->
+  <section class="content-section contact">
+    <div class="container">
+      <div class="row flex-column-reverse flex-sm-row align-items-center">
+        <div class="col-lg-5">
+          <div class="section-title mt-4 mt-sm-0 mb-5 wow fadeInLeft border-1">
+            <h2 class="gradient-text mb-0">Connect Directly <br>With Our Founder</h2>
+            <p class="p17">For immediate assistance with any concerns, <br>reach out to <b>Deepak Singh.</b></p>
+          </div>
+          <!-- end section-title -->
+          <div class="col-12 wow fadeIn">
+            <div class="d-flex">
+              <div class="pr-3">
+                <img src="{% static 'images/about/phone-call.svg' %}" alt="" width="45" height="45">
+              </div>
+              <address class="contact-box">
+                <h6 class="font-weight-bold opacity-75">Phone</h6>
+                <p>+91 91529 97579</p>
+              </address>
+            </div>
+          </div>
+
+          <!-- end col-4 -->
+          <div class="col-12 wow fadeIn">
+            <div class="d-flex">
+              <div class="pr-3">
+                <img src="{% static 'images/about/email.svg' %}" alt="" width="45" height="45">
+              </div>
+              <address class="contact-box">
+                <h6 class="font-weight-bold opacity-75">E-mail</h6> <p>deepak@3qubes.in</p>
+              </address>
+            </div>
+          </div>
+          <!-- end col-4 -->
+
+        </div>
+        <!-- end col-6 -->
+        <div class="col-lg-7 reveal-effect masker wow mt-2 mt-sm-0">
+          <img src="{% static 'images/home/Deepak_Singh.jpg' %}" alt="Deepak_Singh">
+        </div>
+
+        
+        <!-- end col-5 -->
+      </div>
+      <!-- end row -->
+       
+
+      
+       <!-- <div id="footer"></div> -->
+    </div>
+
+
+    <!-- end container -->
+     
+  </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Footer content goes here -->
+            <div class="col-lg-10 col-xl-11">
+                <div class="work-with-us wow fadeInUp">
+                    <h2><span>Connect with us and let's </span>embark <span>on this journey together!</span></h2>
+                    <a href="{% url 'contactus' %}" class="custom-btn">
+                        <svg>
+                            <rect width="218" height="56" x="1" y="1" rx="0" fill="none" stroke="#ffffff"></rect>
+                        </svg>
+                        <span class="text-white">CONTACT US</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp">
+                <address>
+                    <small>Address</small>
+                    <p>105, Keshava, Plot No. C-5, E Block, <br>Bandra Kurla Complex, Bandra (East), <br>Mumbai - 400051, India</p>
+                </address>
+            </div>
+            <div class="col-lg-4 wow fadeInUp col-md-6">
+                <address>
+                    <small>Phone</small>
+                    <p>022 - 40024334</p>
+                </address>
+            </div>
+            <div class="col-lg-4 wow fadeInUp col-md-6">
+                <address>
+                    <small>E-mail</small>
+                    <p><a href="mailto:info@3qubes.in" data-text="info@3qubes.in">info@3qubes.in</a></p>
+                </address>
+            </div>
+            <div class="col-12">
+                <div class="footer-bottom">
+                    <span>© 2024 3Qubes | All Rights Reserved.</span>
+                    <ul class="footer-menu">
+                        <li><a href="{% url 'about' %}" data-text="About Us">About Us</a></li>
+                        <li><a href="{% url 'Ourteam' %}" data-text="Our Team">Our Team</a></li>
+                        <li><a href="{% url 'contactus' %}" data-text="Contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+
+  <!-- end content-section -->
+
+
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bundle.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
