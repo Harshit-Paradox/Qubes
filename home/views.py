@@ -8,8 +8,10 @@ def index(request):
         form = AffilateForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been submitted successfully!')
-            # return redirect('contactus')  # Redirect to the same page or another page after successful submission
+            messages.success(request, 'Thanks For Joining us !')
+            return redirect('index')  # Redirect to the same page or another page after successful submission
+        else:
+            messages.error(request, 'Something went wrong, please try again.')
     else:
         form = AffilateForm()
     return render(request,"index.html")
@@ -19,8 +21,10 @@ def home(request):
         form = AffilateForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been submitted successfully!')
-            # return redirect('contactus')  # Redirect to the same page or another page after successful submission
+            messages.success(request, 'Thanks For Joining us !')
+            return redirect('home')  # Redirect to the same page or another page after successful submission
+        else:
+            messages.error(request, 'Something went wrong, please try again.')
    else:
         form = AffilateForm()
    return render(request,"index.html")
@@ -42,8 +46,8 @@ def carrers(request):
         form = CareerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your application was submitted successfully!')
-            # return redirect('apply_for_job')  # Replace 'apply_for_job' with the correct URL name for your view
+            messages.success(request, 'Your Job application was submitted successfully!')
+            return redirect('carrers')  # Replace 'apply_for_job' with the correct URL name for your view
         else:
             messages.error(request, 'Something went wrong, please try again.')
    else:
@@ -61,7 +65,7 @@ def contactus(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message was sent successfully! We will be in touch as soon as we can.')
-            # return redirect('contactus')  # Redirect to the same page or another one
+            return redirect('contactus')  # Redirect to the same page or another one
         else:
             messages.error(request, 'Something went wrong, please try again.')
     else:
@@ -74,7 +78,8 @@ def builder(request):
         form = BuilderForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message was sent successfully!')
+            messages.success(request, 'Thank you for getting in touch! We appreciate you contacting us. One of our colleagues will get back in touch with you soon!')
+            return redirect('builder')  # Redirect to the same page or another one
         else:
             messages.error(request, 'Something went wrong, please try again.')
     else:
@@ -91,6 +96,7 @@ def broker(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message was sent successfully! We will be in touch as soon as we can.')
+            return redirect('broker')  # Redirect to the same page or another one
         else:
             messages.error(request, 'Something went wrong, please try again.')
         # return redirect('contact')  # Adjust the redirect as per your URL configuration
