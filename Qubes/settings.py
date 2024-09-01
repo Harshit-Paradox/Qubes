@@ -29,7 +29,13 @@ SECRET_KEY = "django-insecure-o==j@38((^yml)4u&=kgc4g!fif=vl5o#*(@ihi+n0oa7#b50y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+
+
+ALLOWED_HOSTS = ['3qubes.co', 'www.3qubes.co', '13.60.184.179', 'localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://3qubes.co', 'https://www.3qubes.co']
+
+
 
 
 # Application definition
