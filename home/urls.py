@@ -18,9 +18,6 @@ urlpatterns = [
     path("builder/", builder , name="builder"),
     path("broker/", broker , name="broker"),
     path("experia/", experia , name="experia"),
-    path("thebridge/", thebridge, name="thebridge"),
-    # path('contact/', contact_view, name='contact'),
-    # path('success/', success_view, name='success'),
 
 
 

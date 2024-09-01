@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, HttpResponse, render
+from django.shortcuts import redirect, render
 from .forms import ContactForm , AffilateForm , BuilderForm , DetailsForm , CareerForm
 from django.contrib import messages
 
