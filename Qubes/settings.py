@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-from pathlib import Path
+
 import os
+from pathlib import Path
 from django.contrib.messages import constants as messages
 
 
@@ -27,9 +28,12 @@ TEMPLATE_DIR = os.path.join(BASE_DIR , 'template')
 SECRET_KEY = "django-insecure-o==j@38((^yml)4u&=kgc4g!fif=vl5o#*(@ihi+n0oa7#b50y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['3qubes.co', 'www.3qubes.co',  'localhost' , '127.0.0.1' ]
+
+CSRF_TRUSTED_ORIGINS = ['https://3qubes.co', 'https://www.3qubes.co']
+
 
 
 # Application definition
@@ -124,7 +128,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATIC_DIR= os.path.join(BASE_DIR,'static')
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles/"
 
 STATICFILES_DIRS =[STATIC_DIR]
 
@@ -148,4 +152,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
 

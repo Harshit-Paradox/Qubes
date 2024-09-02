@@ -14,7 +14,7 @@ def index(request):
             messages.error(request, 'Something went wrong, please try again.')
     else:
         form = AffilateForm()
-    return render(request,"index.html")
+    return render(request, "index.html")
 
 def home(request):
    if request.method == 'POST':
@@ -54,8 +54,6 @@ def carrers(request):
         form = CareerForm()
    return render(request,"careers.html")   
 
-# def contactus(request):
-#    return render(request,"contact-us.html")
 
 
 
