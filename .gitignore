@@ -1,0 +1,49 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.so
+*.pyo
+*.pyd
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations
+**/migrations/*
+
+# Media folder for user uploaded content
+# media/
+
+# Static files
+# staticfiles/
+# static/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.VENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.swp
+docker-compose.override.yml
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
