@@ -21,7 +21,7 @@ db.sqlite3-journal
 # media/
 
 # Static files
-# staticfiles/
+staticfiles/
 # static/
 
 # Virtual environment
