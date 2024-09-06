@@ -39,7 +39,7 @@ class Career(models.Model):
     email = models.EmailField(max_length=255, blank=False)
     number = models.CharField(max_length=15, blank=False)
     city = models.CharField(max_length=100, blank=False)
-    position = models.CharField(max_length=100, default="Site Head", editable=False)
+    position = models.CharField(max_length=100)
     resume = models.FileField(upload_to='resumes/', blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
 

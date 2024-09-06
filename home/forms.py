@@ -23,7 +23,7 @@ class BuilderForm(forms.ModelForm):
 class CareerForm(forms.ModelForm):
     class Meta:
         model = Career
-        fields = ['name', 'email', 'number', 'city', 'resume']
+        fields = ['name', 'email', 'number', 'city', 'position', 'resume']
 
 class DetailsForm(forms.ModelForm):
     class Meta:
