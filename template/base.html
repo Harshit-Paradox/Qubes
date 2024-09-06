@@ -149,5 +149,14 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/bundle.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+
+    <script>
+      window.onpageshow = function(event) {
+      if (event.persisted) {
+          window.location.reload();
+      }
+  };
+  
+    </script>
 </html>
 
