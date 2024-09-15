@@ -47,6 +47,7 @@
 }
 .value-video{
     min-height: 600px;
+    width: 700px;
     object-fit: cover;
     object-position: center;
 }
@@ -218,8 +219,11 @@
         min-height: 400px;
     }
     .left-side-content{
-        background: linear-gradient(151.71deg, #4e36a1 0%, #d41b2b 100%) !important;
+        background: linear-gradient(151.71deg, #4e36a1 0%, #d41b2b 100%);
     }
+    .gradient-class{
+        background: linear-gradient(151.71deg, #1863ec 0%, #fff 200%) !important;
+      }
     .experia-h4, .small-h2{
         font-size: 30px !important;
     }
